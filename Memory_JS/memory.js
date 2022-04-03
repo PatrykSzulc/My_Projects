@@ -18,6 +18,7 @@ const gameLength = cards.length / 2; //9
 //Result information – how many pairs could be guessed
 let gameResult = 0;
 /* End PART 1 */
+
 //PART 2 – COLLECTING, SHOWING AND SHOWING, LISTENING ON CLICKING
 //Function initialized after startup
 const init = function () {
@@ -40,6 +41,7 @@ const init = function () {
 };
 
 init()
+
 /*PART 3 - AFTER THE CLICK ON THE MAP – MINI GAME*/
 const clickCard = function () {
 
