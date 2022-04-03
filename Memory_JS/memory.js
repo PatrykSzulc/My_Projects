@@ -18,7 +18,28 @@ const gameLength = cards.length / 2; //9
 //Result information – how many pairs could be guessed
 let gameResult = 0;
 /* End PART 1 */
+//PART 2 – COLLECTING, SHOWING AND SHOWING, LISTENING ON CLICKING
+//Function initialized after startup
+const init = function () {
+    //Draw of the class for each diva
+    cards.forEach(card => {
+        //Position from the Color Storage Array
+        const position = Math.floor(Math.random() * cardColors.length); //1
+        //Adding a class to a specific Div
+        card.classList.add(cardColors[position]);
+        //Delete the dragged element, shorter table for the next draw
+        cardColors.splice(position, 1);
+    })
+    //Add the Hidden Class after 2 seconds – Hide and add eavesdropping on click
+    setTimeout(function () {
+        cards.forEach(card => {
+            card.classList.add("hidden")
+            card.addEventListener("click", clickCard)
+        })
+    }, 2000)
+};
 
+init()
 /*PART 3 - AFTER THE CLICK ON THE MAP – MINI GAME*/
 const clickCard = function () {
 
@@ -74,26 +95,3 @@ const clickCard = function () {
         }, 500)
     }
 };
-
-//PART 2 – COLLECTING, SHOWING AND SHOWING, LISTENING ON CLICKING
-//Function initialized after startup
-const init = function () {
-    //Draw of the class for each diva
-    cards.forEach(card => {
-        //Position from the Color Storage Array
-        const position = Math.floor(Math.random() * cardColors.length); //1
-        //Adding a class to a specific Div
-        card.classList.add(cardColors[position]);
-        //Delete the dragged element, shorter table for the next draw
-        cardColors.splice(position, 1);
-    })
-    //Add the Hidden Class after 2 seconds – Hide and add eavesdropping on click
-    setTimeout(function () {
-        cards.forEach(card => {
-            card.classList.add("hidden")
-            card.addEventListener("click", clickCard)
-        })
-    }, 2000)
-};
-
-init()
