@@ -1,6 +1,6 @@
 const cardColors = ["red", "red", "green", "green", "blue", "blue", "brown", "brown", "yellow", "yellow", "gray", "gray", "cadetblue", "cadetblue", "violet", "violet", "lightgreen", "lightgreen"];
 
-// PART 1 
+
 //Download all Divs
 let cards = document.querySelectorAll("div"); //NodeList; Method getElementsByTagName creates HTMLCollection
 cards = [...cards]; //We create an array from a list (here we don’t have to, but if we use getElementsByClassName, then we have to, because there is no forEach method)
@@ -17,9 +17,9 @@ const activeCards = []; //Table for two cards
 const gameLength = cards.length / 2; //9
 //Result information – how many pairs could be guessed
 let gameResult = 0;
-// End PART 1 
 
-//PART 2 – COLLECTING, SHOWING AND SHOWING, LISTENING ON CLICKING
+
+//COLLECTING, SHOWING AND SHOWING, LISTENING ON CLICKING
 //Function initialized after startup
 const init = function () {
     //Draw of the class for each diva
@@ -42,7 +42,7 @@ const init = function () {
 
 init()
 
-//PART 3 - AFTER THE CLICK ON THE MAP – MINI GAME
+//AFTER THE CLICK ON THE MAP – MINI GAME
 const clickCard = function () {
 
     activeCard = this; //on which was clicked
