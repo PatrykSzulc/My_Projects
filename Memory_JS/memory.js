@@ -6,7 +6,6 @@ let cards = document.querySelectorAll("div"); //NodeList; Method getElementsByTa
 cards = [...cards]; //We create an array from a list (here we don’t have to, but if we use getElementsByClassName, then we have to, because there is no forEach method)
 
 //You can do the same as above in an entry
-//let cards = [...document.querySelectorAll("div")]
 
 const startTime = new Date().getTime(); //We load the current date in milliseconds
 
